@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'babbaj-repo'
+        url = 'https://babbaj.github.io/maven/'
+    }
+}
+
+dependencies {
+    implementation 'dev.babbaj:nether-pathfinder:1.5'
+
+}
+
+test {
+    useJUnitPlatform()
+}
