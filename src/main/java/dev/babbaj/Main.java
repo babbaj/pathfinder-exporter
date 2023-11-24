@@ -44,8 +44,8 @@ public class Main {
         PathSegment segment;
         try (DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(Files.newOutputStream(Paths.get("out.path"))))) {
             do {
-                segment = NetherPathfinder.pathFind(ctx, startX, 64, startZ, x2, 64, z2, true, false, 0, true, 1);
-                System.out.println("segment " + segment.finished);
+                segment = NetherPathfinder.pathFind(ctx, startX, 64, startZ, x2, 64, z2, true, false, 0, true, 1000);
+//                System.out.println("segment " + segment.finished);
                 if (segment == null) {
                     System.err.println("pathFind returned null");
                     System.exit(1);
